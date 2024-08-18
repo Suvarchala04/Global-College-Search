@@ -1,0 +1,158 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s ease-in-out;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #333;
+    border-radius: 30px;
+    margin-right: 10px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]::placeholder {
+    color: #aaaaaa;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #bb86fc;
+    box-shadow: 0 4px 20px rgba(187, 134, 252, 0.5);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #bb86fc, #3700b3);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #3700b3, #bb86fc);
+    box-shadow: 0 4px 20px rgba(187, 134, 252, 0.5);
+}
+
+#list {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+#list li {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #bb86fc, #3700b3); /* Matching the button gradient */
+    color: #ffffff; /* Ensure text is readable against the gradient */
+}
+
+#list li img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.college-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.college-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #bb86fc; /* Matching the search box color */
+}
+
+.college-details {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #list li img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+}
